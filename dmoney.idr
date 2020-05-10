@@ -24,9 +24,8 @@ usdData = Money 10 USD
 gbpData : DMoney GBP 
 gbpData = Money 7 GBP
 
-addSameCurrency : Bool -- to sie skompiluje
-addSameCurrency = let calculated = addMoney plnData plnData in
-                      getAmount calculated == 10
+addSameCurrency : (addMoney DMoney.plnData DMoney.plnData) = Money 10 PLN
+addSameCurrency = Refl
 
 ---to sie nie skompiluje
 {-
